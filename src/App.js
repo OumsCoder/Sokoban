@@ -32,6 +32,7 @@ class App extends Component {
     this.setState({   
         stancePlayer : [this.state.stancePlayer[0]-10 , this.state.stancePlayer[1]]
     })
+
     for (let i=0; i<this.state.level.length; i++) {
       if(this.state.stancePlayer[0]===this.state.level[i][0] && this.state.stancePlayer[1]===this.state.level[i][1]){
         this.setState({   
@@ -39,9 +40,11 @@ class App extends Component {
       })
       }
     }
-    console.log(this.state.stanceGoal,this.state.stancePlayer)
+
     if(this.state.stancePlayer[0]===this.state.stanceGoal[0] && this.state.stancePlayer[1]-10===this.state.stanceGoal[1]){
-      console.log('Pousse Goal')
+      this.setState({
+        stanceGoal : [this.state.stanceGoal[0]-10, this.state.stanceGoal[1]]
+      })
     }
   }
 
@@ -50,6 +53,7 @@ class App extends Component {
     this.setState({   
       stancePlayer : [this.state.stancePlayer[0] , this.state.stancePlayer[1]+10]
     })
+
     for (let i=0; i<this.state.level.length; i++) {
       if(this.state.stancePlayer[0]===this.state.level[i][0] && this.state.stancePlayer[1]===this.state.level[i][1]){
         this.setState({   
@@ -57,9 +61,11 @@ class App extends Component {
         })
       }
     }
-    console.log(this.state.stanceGoal,this.state.stancePlayer)
+
     if(this.state.stancePlayer[0]===this.state.stanceGoal[0] && this.state.stancePlayer[1]-10===this.state.stanceGoal[1]){
-      console.log('Pousse Goal')
+      this.setState({
+        stanceGoal : [this.state.stanceGoal[0], this.state.stanceGoal[1]+10]
+      })
     }
   }
 
@@ -68,6 +74,7 @@ class App extends Component {
     this.setState({   
       stancePlayer : [this.state.stancePlayer[0]+10 , this.state.stancePlayer[1]]
     })
+
     for (let i=0; i<this.state.level.length; i++) {
       if(this.state.stancePlayer[0]===this.state.level[i][0] && this.state.stancePlayer[1]===this.state.level[i][1]){
         this.setState({   
@@ -75,9 +82,11 @@ class App extends Component {
         })
       }
     }
-    console.log(this.state.stanceGoal,this.state.stancePlayer)
+
     if(this.state.stancePlayer[0]===this.state.stanceGoal[0] && this.state.stancePlayer[1]-10===this.state.stanceGoal[1]){
-      console.log('Pousse Goal')
+      this.setState({
+        stanceGoal : [this.state.stanceGoal[0]+10, this.state.stanceGoal[1]]
+      })
     }
   }
 
@@ -86,6 +95,7 @@ class App extends Component {
     this.setState({   
       stancePlayer : [this.state.stancePlayer[0] , this.state.stancePlayer[1]-10]
     })
+
     for (let i=0; i<this.state.level.length; i++) {
       if(this.state.stancePlayer[0]===this.state.level[i][0] && this.state.stancePlayer[1]===this.state.level[i][1]){
         this.setState({   
@@ -93,9 +103,11 @@ class App extends Component {
         })
       }
     }
-    console.log(this.state.stanceGoal,this.state.stancePlayer)
+
     if(this.state.stancePlayer[0]===this.state.stanceGoal[0] && this.state.stancePlayer[1]-10===this.state.stanceGoal[1]){
-      console.log('Pousse Goal')
+      this.setState({
+        stanceGoal : [this.state.stanceGoal[0], this.state.stanceGoal[1]-10]
+      })
     }
   }
 
