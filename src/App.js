@@ -48,6 +48,10 @@ class App extends Component {
         stanceGoal : [this.state.stanceGoal[0]-10, this.state.stanceGoal[1]]
       })
     }
+
+    if(this.state.stancePlayer[0]===this.state.stanceWin[0] && this.state.stancePlayer[1]-10===this.state.stanceWin[1]){
+      console.log('Gagné')
+    }
   }
 
   // fx when user press rigth
@@ -68,6 +72,10 @@ class App extends Component {
       this.setState({
         stanceGoal : [this.state.stanceGoal[0], this.state.stanceGoal[1]+10]
       })
+    }
+
+    if(this.state.stancePlayer[0]===this.state.stanceWin[0] && this.state.stancePlayer[1]-10===this.state.stanceWin[1]){
+      console.log('Gagné')
     }
   }
 
@@ -90,6 +98,10 @@ class App extends Component {
         stanceGoal : [this.state.stanceGoal[0]+10, this.state.stanceGoal[1]]
       })
     }
+
+    if(this.state.stancePlayer[0]===this.state.stanceWin[0] && this.state.stancePlayer[1]-10===this.state.stanceWin[1]){
+      console.log('Gagné')
+    }
   }
 
   // fx when user press left
@@ -110,6 +122,10 @@ class App extends Component {
       this.setState({
         stanceGoal : [this.state.stanceGoal[0], this.state.stanceGoal[1]-10]
       })
+    }
+
+    if(this.state.stancePlayer[0]===this.state.stanceWin[0] && this.state.stancePlayer[1]-10===this.state.stanceWin[1]){
+      console.log('Gagné')
     }
   }
 
