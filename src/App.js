@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Stage from './Components/Stage/Stage'
 import Player from './Components/Player/Player.js'
+import Goal from './Components/Goal/Goal'
 
 class App extends Component {
 
@@ -21,7 +22,9 @@ class App extends Component {
       [60, 90],     [30, 10],   [30, 20],    [40, 20],
     ],
     // Stance Player
-    stancePlayer : [40, 10]
+    stancePlayer : [40, 10],
+    // Stance Goal
+    stanceGoal : [60, 40]
   }
   
   // fx when user press up 
@@ -35,6 +38,10 @@ class App extends Component {
           stancePlayer : [this.state.stancePlayer[0]+10 , this.state.stancePlayer[1]]
       })
       }
+    }
+    console.log(this.state.stanceGoal,this.state.stancePlayer)
+    if(this.state.stancePlayer[0]===this.state.stanceGoal[0] && this.state.stancePlayer[1]-10===this.state.stanceGoal[1]){
+      console.log('Pousse Goal')
     }
   }
 
@@ -50,6 +57,10 @@ class App extends Component {
         })
       }
     }
+    console.log(this.state.stanceGoal,this.state.stancePlayer)
+    if(this.state.stancePlayer[0]===this.state.stanceGoal[0] && this.state.stancePlayer[1]-10===this.state.stanceGoal[1]){
+      console.log('Pousse Goal')
+    }
   }
 
   // fx when user press down
@@ -64,6 +75,10 @@ class App extends Component {
         })
       }
     }
+    console.log(this.state.stanceGoal,this.state.stancePlayer)
+    if(this.state.stancePlayer[0]===this.state.stanceGoal[0] && this.state.stancePlayer[1]-10===this.state.stanceGoal[1]){
+      console.log('Pousse Goal')
+    }
   }
 
   // fx when user press left
@@ -77,6 +92,10 @@ class App extends Component {
           stancePlayer : [this.state.stancePlayer[0] , this.state.stancePlayer[1]+10]
         })
       }
+    }
+    console.log(this.state.stanceGoal,this.state.stancePlayer)
+    if(this.state.stancePlayer[0]===this.state.stanceGoal[0] && this.state.stancePlayer[1]-10===this.state.stanceGoal[1]){
+      console.log('Pousse Goal')
     }
   }
 
@@ -98,8 +117,9 @@ class App extends Component {
     }
     return (
       <div className="game-area">
-          <Player stance={this.state.stancePlayer} />
-          <Stage area={this.state.level}/>
+        <Player stance={this.state.stancePlayer} />
+        <Stage area={this.state.level}/>
+        <Goal stances={this.state.stanceGoal}/>  
       </div>
     )
   }
