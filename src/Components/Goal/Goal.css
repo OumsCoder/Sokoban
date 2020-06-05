@@ -3,3 +3,10 @@
     width: 15px;
     height: 15px;
 }
+
+#win {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    opacity: 0.8;
+}
